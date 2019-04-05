@@ -15,7 +15,7 @@ app.use(function(req, res, next){
 });
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/eimp', { useNewUrlParser: true }, () => {
+mongoose.connect('mongodb://iempadmin:iempadmin123@ds123259.mlab.com:23259/ie-marketpop', { useNewUrlParser: true }, () => {
     console.log('Database is connected');
 });
 mongoose.set('userCreateIndex', true);
