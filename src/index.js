@@ -47,10 +47,8 @@ app.post('/export', async (req, res) => {
 });
 
 app.get('/import/:keyword', async (req, res) => {
-    const {keyword} = req.params.keyword;
-
     try {
-        const estoque = await Estoque.findOne({keyword});
+        const estoque = await Estoque.findOne({keyword: req.params.keyword});
         if(estoque != null)
             return res.send(estoque);
         else
